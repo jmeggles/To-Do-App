@@ -1,26 +1,45 @@
-import React from 'react';
-import logo from './logo.svg';
-import './App.css';
+import React, { Component } from "react";
+import { BrowserRouter as Router, Route, Link } from "react-router-dom";
 
-function App() {
-  return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
-    </div>
-  );
+import "bootstrap/dist/css/bootstrap.min.css";
+
+// importing components
+import CreateTodo from "./components/create-todo";
+import EditTodo from "./components/edit-todo";
+import TodosList from "./components/todo-list";
+
+import logo from "./logo.png";
+
+class App extends Component {
+  render() {
+    return (
+      <Router>
+        <div className="container">
+          <nav className="navbar navbar-expand-lg navbar-light bg-light">
+            <a class="navbar-brand" href="https://codingthesmartway.com" target="_blank">
+              <img src={logo} width="30" height="30" alt="CodingTheSmartWay.com" />
+            </a>
+            <Link to="/" className="navbar-brand">To-Do App (using MERN stack)</Link>
+            <div className="collpase navbar-collapse">
+              <ul className="navbar-nav mr-auto">
+                <li className="navbar-item">
+                  <Link to="/" className="nav-link">To-Do</Link>
+                </li>
+                <li className="navbar-item">
+                  <Link to="/create" className="nav-link">Create To-Do</Link>
+                </li>
+              </ul>
+            </div>
+          </nav>
+          <br/>
+          {/* routing config.  using paths to 3 separate components */}
+          <Route path="/" exact component={TodosList} />
+          <Route path="/edit/:id" component={EditTodo} />
+          <Route path="/create" component={CreateTodo} />
+        </div>
+      </Router>
+    );
+  }
 }
 
 export default App;
