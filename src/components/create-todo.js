@@ -1,4 +1,5 @@
 import React, { Component } from "react";
+import axios from "axios"; 
 
 // exporting this component to import at App.js 
 export default class CreateTodo extends Component {
@@ -41,6 +42,17 @@ export default class CreateTodo extends Component {
         console.log(`To-Do Description: ${this.state.todo_description}`);
         console.log(`To-Do Prority: ${this.state.todo_priority}`);
         console.log(`To-Do Completed: ${this.state.todo_completed}`);
+
+        // in the third installment, adding the object {} 
+        const newTodo = {
+            todo_description: this.state.todo_description,
+            todo_priority: this.state.todo_priority,
+            todo_completed: this.state.todo_completed
+        }
+        // added in the third installlment of this project; this is the endpoint that accepts the incoming post request. the axios post returns a promise
+        axios.post("http://localhost:3001/todos/add", newTodo)
+            .then(res => console.log(res.data));
+            
 
         // Finally we’re making sure that the form is resetted by setting the resetting the state object.
         this.setState({
