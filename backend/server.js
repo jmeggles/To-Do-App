@@ -14,12 +14,12 @@ let Todo = require("./todo.model");
 app.use(cors());
 app.use(bodyParser.json());
 
-// connecting to mongoDB with a configuration parameter {useNewUrlParser}
+// connecting to mongoDB with a configuration parameter 
 mongoose.connect("mongodb://127.0.0.1:27017/todos", {useNewUrlParser: true});
 const connection = mongoose.connection;
 
 connection.once("open", function() {
-    console.log("MongoDB connection established successfully");
+    console.log(" **** MongoDB connection established successfully!! *** ");
 })
 
 // retrieves all todos
@@ -47,6 +47,7 @@ todoRoutes.route("/:id").get(function(req, res) {
 todoRoutes.route("/add").post(function(req, res) {
     let todo = new Todo(req.body);
     todo.save()
+    // async await
         .then(todo => {
             res.status(200).json({"todo": "todo addedd successfully"});
         }) 
@@ -73,7 +74,7 @@ todoRoutes.route("/update/:id").post(function(req, res) {
     });
 });
 
-// the router 
+// the router as a middleware which will take control of requests starting with `/todos`.
 app.use("/todos", todoRoutes);
 
 // the server starts up with a callback function to the command line which is executed once the server process starts successfully

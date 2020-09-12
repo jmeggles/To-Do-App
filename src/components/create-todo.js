@@ -54,7 +54,7 @@ export default class CreateTodo extends Component {
             .then(res => console.log(res.data));
             
 
-        // Finally we’re making sure that the form is resetted by setting the resetting the state object.
+        // Finally we’re making sure that the form is reset by resetting the state object.
         this.setState({
             todo_description: " ",
             todo_priority: " ",

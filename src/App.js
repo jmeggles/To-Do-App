@@ -17,7 +17,7 @@ class App extends Component {
         <div className="container">
           <nav className="navbar navbar-expand-lg navbar-light bg-light">
             <a className="navbar-brand" href="/#" target="_blank">
-              <img src={logo} width="30" height="30"/>
+              <img src={logo} alt="logo" width="30" height="30"/>
             </a>
             <Link to="/" className="navbar-brand">To-Do App</Link>
             <div className="collpase navbar-collapse">
