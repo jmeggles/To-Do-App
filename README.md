@@ -1,4 +1,4 @@
-# To-Do App 
+# To-Do App ![GitHub deployments](https://img.shields.io/github/deployments/badges/shields/shields-staging?color=green)
 
 ## Overview 
 This simple To-Do project uses the MERN stack and React bootstrap. Deployed with Heroku for easy viewing and use of application.
