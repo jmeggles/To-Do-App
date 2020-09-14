@@ -14,6 +14,12 @@ let Todo = require("./todo.model");
 app.use(cors());
 app.use(bodyParser.json());
 
+// Serve up static assets
+if (process.env.NODE_ENV === "production") {
+    // javascript and css files will be read and served from this folder
+    app.use(express.static("client/build"));
+  }
+
 
 // connecting to mongoDB with a configuration parameter 
 mongoose.connect(
