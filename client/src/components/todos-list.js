@@ -1,6 +1,6 @@
 import React, { Component } from "react";
 import { Link } from "react-router-dom";
-import axios from "axios";
+import axios from "axios"; // promise-based HTTP client that sports an API
 
 // 
 const Todo = props => (
@@ -37,12 +37,12 @@ export default class TodoList extends Component {
     // final installment, adding the update info to delete todo
     componentDidUpdate() {
         axios.get("http://localhost:3001/todos/")
-        .then(response => {
-            this.setState({todos: response.data});
-        })
-        .catch(function (error) {
-            console.log(error);
-        })   
+            .then(response => {
+                this.setState({ todos: response.data });
+            })
+            .catch(function (error) {
+                console.log(error);
+            })
     }
 
     todoList() {
@@ -66,7 +66,7 @@ export default class TodoList extends Component {
                         </tr>
                     </thead>
                     <tbody>
-                        { this.todoList() }
+                        {this.todoList()}
                         {/* helper method to get back jsx code for the rows of the table */}
                     </tbody>
                 </table>

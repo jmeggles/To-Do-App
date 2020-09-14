@@ -4,7 +4,7 @@ import "bootstrap/dist/css/bootstrap.min.css";
 // importing components files
 import CreateTodo from "./components/create-todo";
 import EditTodo from "./components/edit-todo";
-import TodosList from "./components/todo-list";
+import TodosList from "./components/todos-list";
 
 import logo from "./logo.png";
 
@@ -17,14 +17,14 @@ class App extends Component {
             <a className="navbar-brand" href="/#" target="_blank">
               <img src={logo} alt="logo" width="30" height="30"/>
             </a>
-            <Link to="/" className="navbar-brand">To-Do App</Link>
+            <Link to="/" className="navbar-brand">The To-Do App</Link>
             <div className="collpase navbar-collapse">
               <ul className="navbar-nav mr-auto">
                 <li className="navbar-item">
-                  <Link to="/" className="nav-link">To-Do</Link>
+                  <Link to="/" className="nav-link">View To-Do List</Link>
                 </li>
                 <li className="navbar-item">
-                  <Link to="/create" className="nav-link">Create To-Do</Link>
+                  <Link to="/create" className="nav-link">Create New To-Do</Link>
                 </li>
               </ul>
             </div>

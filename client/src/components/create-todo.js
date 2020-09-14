@@ -1,5 +1,5 @@
 import React, { Component } from "react";
-import axios from "axios"; 
+import axios from "axios"; // promise-based HTTP client that sports an API
 
 // exporting this component to import at App.js 
 export default class CreateTodo extends Component {

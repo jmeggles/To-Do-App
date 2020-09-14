@@ -5,7 +5,7 @@ const cors = require("cors"); // middleware
 const mongoose = require("mongoose"); // library allows us to deal in an object-oriented way wih mongodb
 const todoRoutes = express.Router();
 
-const PORT = 3001
+const PORT = 3001;
 
 // bring in the todoDB from the model.js
 let Todo = require("./todo.model");
@@ -80,4 +80,3 @@ app.use("/todos", todoRoutes);
 app.listen(PORT, function() {
     console.log("==> 🌎 Visit http://localhost:3000/ 🌎 <== ");
 })
-

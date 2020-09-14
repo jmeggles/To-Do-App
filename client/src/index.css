@@ -1,0 +1,14 @@
+/* strike through the to-do after editing */
+.completed {
+  text-decoration: line-through;
+}
+
+.btn {
+  background-color: #64d1e4 !important;
+  border-color: #64d1e4 !important;
+  color: grey !important;
+}
+
+.btn:hover {
+  background-color: aquamarine !important;
+}
