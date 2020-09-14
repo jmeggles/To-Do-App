@@ -43,7 +43,7 @@ After install or following this [link](), the page will load with the current to
  I will add a sorting option and physical delete buttons in future updates. As I use the app more, I will add additional updates.
 
   ## Tests
-Postman was succeffully used to ensure the database was receiving all *Get*, *Post*, and *Update* requests. 
+Postman was successffully used to ensure the database was receiving all *Get*, *Post*, and *Update* requests. 
  
   ## License 
   ![APM](https://img.shields.io/apm/l/npm?color=pink&style=plastic)
