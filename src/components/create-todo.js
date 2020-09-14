@@ -8,7 +8,6 @@ export default class CreateTodo extends Component {
     constructor(props) {
         // super is the parent constructor and passing in props
         super(props);
-
         // Because in the 3 implemented methods we’re dealing with the component’s state object we need to make sure to bind those methods to this by adding the following lines of code to the constructor:
         this.onChangeTodoDescription = this.onChangeTodoDescription.bind(this);
         this.onChangeTodoPriority = this.onChangeTodoPriority.bind(this);

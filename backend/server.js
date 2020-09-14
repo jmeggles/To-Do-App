@@ -39,37 +39,36 @@ todoRoutes.route("/").get(function(req, res) {
 todoRoutes.route("/:id").get(function(req, res) {
     // get the value which is available in the ID param of the URL. acessing params object then . then name of param then . then id
     let id = req.params.id;
-    Todo.findById(id, function(err, todos) {
-            res.json(todos);
+    Todo.findById(id, function(err, todo) {
+            res.json(todo);
     });
 });
 
 todoRoutes.route("/add").post(function(req, res) {
     let todo = new Todo(req.body);
     todo.save()
-    // async await
         .then(todo => {
-            res.status(200).json({"todo": "todo addedd successfully"});
+            res.status(200).json("To-Do addedd successfully");
         }) 
         .catch(err => {
-            res.status(400).send("adding new todo FAILED");
+            res.status(400).send("Adding new todo FAILED");
         });
 });
 
 todoRoutes.route("/update/:id").post(function(req, res) {
     Todo.findById(req.params.id, function(err, todo) {
         if (!todo)
-            res.status(404).send("data is not found");
+            res.status(404).send("Error..data is not found");
         else
             todo.todo_description = req.body.todo_description;
             todo.todo_priority = req.body.todo_priority;
             todo.todo_completed = req.body.todo_completed;
 
             todo.save().then(todo => {
-                res.json('Todo updated');
+                res.json("To-Do updated!");
         })
         .catch(err => {
-            res.status(400).send("Update not possible");
+            res.status(400).send("Did NOT update!");
         });
     });
 });
@@ -79,6 +78,6 @@ app.use("/todos", todoRoutes);
 
 // the server starts up with a callback function to the command line which is executed once the server process starts successfully
 app.listen(PORT, function() {
-    console.log("==> 🌎 Visit http://localhost:3001/ 🌎 <== ");
+    console.log("==> 🌎 Visit http://localhost:3000/ 🌎 <== ");
 })
 
