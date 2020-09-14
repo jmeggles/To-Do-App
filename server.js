@@ -5,7 +5,7 @@ const cors = require("cors"); // middleware
 const mongoose = require("mongoose"); // library allows us to deal in an object-oriented way wih mongodb
 const todoRoutes = express.Router();
 
-const PORT = 3001;
+const PORT = process.env.PORT || 3001;
 
 // bring in the todoDB from the model.js
 let Todo = require("./todo.model");
@@ -14,13 +14,21 @@ let Todo = require("./todo.model");
 app.use(cors());
 app.use(bodyParser.json());
 
-// connecting to mongoDB with a configuration parameter 
-mongoose.connect("mongodb://127.0.0.1:27017/todos", {useNewUrlParser: true});
-const connection = mongoose.connection;
 
-connection.once("open", function() {
-    console.log(" **** MongoDB connection established successfully!! *** ");
-})
+// connecting to mongoDB with a configuration parameter 
+mongoose.connect(
+    process.env.MONGODB_URI || "mongodb://localhost/todo-list", {
+        useNewUrlParser: true,
+        useUnifiedTopology: true,
+        useCreateIndex: true,
+        useFindAndModify: false
+      }
+    );
+// const connection = mongoose.connection;
+
+// connection.once("open", function() {
+//     console.log(" **** MongoDB connection established successfully!! *** ");
+// })
 
 // retrieves all todos
 todoRoutes.route("/").get(function(req, res) {
