@@ -1,4 +1,4 @@
-# To-Do App ![GitHub deployments](https://img.shields.io/github/deployments/badges/shields/shields-staging?color=green)
+# To-Do App [![Build Status](https://travis-ci.org/jmeggles/To-Do-App.svg?branch=master)](https://travis-ci.org/jmeggles/To-Do-App)
 
 ## Overview 
 This simple To-Do project uses the MERN stack and React bootstrap. Deployed with Heroku for easy viewing and use of application.
@@ -43,7 +43,7 @@ After install or following this [link](https://todo-app-with-mern.herokuapp.com/
  I will add a sorting option and physical delete buttons in future updates. As I use the app more, I will add additional updates.
 
   ## Tests
-Postman was successffully used to ensure the database was receiving all *Get*, *Post*, and *Update* requests. 
+Postman was successffully used to ensure the database was receiving all *Get*, *Post*, and *Update* requests. Travis CI also used to verify build success.
  
   ## License 
   ![APM](https://img.shields.io/apm/l/npm?color=pink&style=plastic)
