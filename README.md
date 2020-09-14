@@ -56,6 +56,11 @@ Postman was successffully used to ensure the database was receiving all *Get*, *
   [Linkedin](https://www.linkedin.com/in/jody-eggleston/)
 
   ## Additional_Screenshots
-
-
-
+  - ![Screenshot of deployed project](./client/public/assets/images/To-Do-MongoDB.png)
+  - ![Screenshot of deployed project](./client/public/assets/images/To-Do-Postman1.png)
+  - ![Screenshot of deployed project](./client/public/assets/images/To-Do-Postman2.png)
+  - ![Screenshot of deployed project](./client/public/assets/images/To-Do-Postman3.png)
+  - ![Screenshot of deployed project](./client/public/assets/images/To-Do-Postman4.png)
+  - ![Screenshot of deployed project](./client/public/assets/images/To-Do-Postman5.png)
+  - ![Screenshot of deployed project](./client/public/assets/images/To-Do-Postman6.png)
+  - ![Screenshot of deployed project](./client/public/assets/images/To-Do-Postman7.png)
