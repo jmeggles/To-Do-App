@@ -5,7 +5,7 @@ const cors = require("cors"); // middleware
 const mongoose = require("mongoose"); // library allows us to deal in an object-oriented way wih mongodb
 const todoRoutes = express.Router();
 
-const PORT = process.env.PORT || 3001;
+let PORT = process.env.PORT || 5000;
 
 // bring in the todoDB from the model.js
 let Todo = require("./todo.model");
@@ -14,12 +14,14 @@ let Todo = require("./todo.model");
 app.use(cors());
 app.use(bodyParser.json());
 
+
 // Serve up static assets
 if (process.env.NODE_ENV === "production") {
     // javascript and css files will be read and served from this folder
     app.use(express.static("client/build"));
   }
-
+// the router as a middleware which will take control of requests starting with `/todos`.
+app.use("/todos", todoRoutes);
 
 // connecting to mongoDB with a configuration parameter 
 mongoose.connect(
@@ -86,8 +88,7 @@ todoRoutes.route("/update/:id").post(function(req, res) {
     });
 });
 
-// the router as a middleware which will take control of requests starting with `/todos`.
-app.use("/todos", todoRoutes);
+
 
 // the server starts up with a callback function to the command line which is executed once the server process starts successfully
 // Start the API server

@@ -20,7 +20,7 @@ export default class EditTodo extends Component {
 
     componentDidMount() {
         // makes a browser request for all to-do items
-        axios.get("http://localhost:3001/todos/" + this.props.match.params.id)
+        axios.get("http://localhost:5000/todos/" + this.props.match.params.id)
         // if first argument is fulfilled, .then() will be called.
             .then(response => {
                 this.setState({
@@ -67,7 +67,7 @@ export default class EditTodo extends Component {
             todo_completed: this.state.todo_completed
         };
         // sends the updated request
-        axios.post("http://localhost:3001/todos/update/" + this.props.match.params.id, obj)
+        axios.post("http://localhost:5000/todos/update/" + this.props.match.params.id, obj)
             .then(res => console.log(res.data));
 
         this.props.history.push("/");

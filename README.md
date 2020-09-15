@@ -31,7 +31,7 @@ This simple To-Do project uses the MERN stack and React bootstrap. Deployed with
  Intriqued by the many ways to approach building a React app, I am researching and actively building as many projects as I can to keep learning.  This is one of many and will be updating as I learn more.
 
   ## Installation  
-No install necessary to view/use the app. Follow this [link](https://todo-app-with-mern.herokuapp.com/).  However, to install, clone repo and `npm i` which will concurrently add the `node_modules` to both the frontend and the backend.  Then `npm start` to run application locally.  Uses port 3001. 
+No install necessary to view/use the app. Follow this [link](https://todo-app-with-mern.herokuapp.com/).  However, to install, clone repo and `npm i` which will concurrently add the `node_modules` to both the frontend and the backend.  Then `npm start` to run application locally.  Uses port 5000. 
 
   ## How_to_use
 After install or following this [link](https://todo-app-with-mern.herokuapp.com/), the page will load with the current to-dos.  Click on *Create New To-Do* to start a new task.  To view all to-dos, click on *View To-Do List*. To complete a task, from the *View To-Do List* page, click *Edit* and simply write over the task with a new one or lick the *Completed* box to keep that task in view.  

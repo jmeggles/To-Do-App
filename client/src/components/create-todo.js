@@ -49,7 +49,7 @@ export default class CreateTodo extends Component {
             todo_completed: this.state.todo_completed
         }
         // added in the third installlment of this project; this is the endpoint that accepts the incoming post request. the axios post returns a promise
-        axios.post("http://localhost:3001/todos/add", newTodo)
+        axios.post("http://localhost:5000/todos/add", newTodo)
             .then(res => console.log(res.data));
             
 
