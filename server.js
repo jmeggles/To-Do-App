@@ -5,7 +5,7 @@ const cors = require("cors"); // middleware
 const mongoose = require("mongoose"); // library allows us to deal in an object-oriented way wih mongodb
 const todoRoutes = express.Router();
 
-let PORT = process.env.PORT || 5000;
+const PORT = process.env.PORT || 5000;
 
 // bring in the todoDB from the model.js
 let Todo = require("./todo.model");
