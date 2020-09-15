@@ -1,5 +1,6 @@
 {
   "name": "to-do-app",
+  "homepage": "https://todo-app-with-mern.herokuapp.com/",
   "version": "1.0.0",
   "description": "",
   "main": "server.js",
