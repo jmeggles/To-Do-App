@@ -31,9 +31,9 @@ class App extends Component {
           </nav>
           <br/>
           {/* routing config.  using paths to 3 separate components */}
-          <Route path="/" exact component={TodosList} />
+          <Route path="/" component={TodosList} />
           <Route path="/edit/:id" component={EditTodo} />
-          <Route path="/create" component={CreateTodo} />
+          <Route exact path="/create" component={CreateTodo} />
         </div>
       </Router>
     );

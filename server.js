@@ -90,6 +90,7 @@ todoRoutes.route("/update/:id").post(function(req, res) {
 app.use("/todos", todoRoutes);
 
 // the server starts up with a callback function to the command line which is executed once the server process starts successfully
-app.listen(PORT, function() {
-    console.log("==> 🌎 Visit http://localhost:3000/ 🌎 <== ");
-})
+// Start the API server
+app.listen(PORT, () =>
+  console.log(`🌎  ==> API Server now listening on PORT ${PORT}!`)
+);
