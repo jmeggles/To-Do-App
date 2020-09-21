@@ -8,7 +8,7 @@ const todoRoutes = express.Router();
 const PORT = process.env.PORT || 5000;
 
 // bring in the todoDB from the model.js
-let Todo = require("./todo.model");
+let Todo = require("./models/todo.model");
 
 // adding middleware by calling 'use' then passing the instance (cors) which is created by calling the cors function.
 app.use(cors());
@@ -25,11 +25,13 @@ app.use("/todos", todoRoutes);
 
 // connecting to mongoDB with a configuration parameter 
 mongoose.connect(
-    process.env.MONGODB_URI || "mongodb://localhost/todo-list", {
-        useNewUrlParser: true,
-        useCreateIndex: true,
-        useFindAndModify: false
-      }
+    process.env.MONGODB_URI || "mongodb://localhost/todo-list", 
+        {
+            useNewUrlParser: true,
+            useUnifiedTopology: true,
+            useCreateIndex: true,
+            useFindAndModify: false
+          }
     );
 // const connection = mongoose.connection;
 
