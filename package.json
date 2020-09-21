@@ -1,6 +1,5 @@
 {
   "name": "to-do-app",
-  "homepage": "https://todo-app-with-mern.herokuapp.com/",
   "version": "1.0.0",
   "description": "",
   "main": "server.js",
@@ -17,9 +16,12 @@
     "build": "cd client && npm run build",
     "heroku-postbuild": "npm run build"
   },
-  "keywords": [],
-  "author": "",
-  "license": "ISC",
+  "author": "Jody Eggleston",
+  "license": "MIT",
+  "devDependencies": {
+    "concurrently": "^4.1.0",
+    "nodemon": "^1.18.7"
+  },
   "dependencies": {
     "axios": "^0.20.0",
     "body-parser": "^1.18.3",
