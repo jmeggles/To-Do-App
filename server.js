@@ -18,7 +18,7 @@ app.use(bodyParser.json());
 // Serve up static assets
 if (process.env.NODE_ENV === "production") {
     // javascript and css files will be read and served from this folder
-    app.use(express.static("build"));
+    app.use(express.static("client/build"));
   }
 // the router as a middleware which will take control of requests starting with `/todos`.
 app.use("/todos", todoRoutes);
