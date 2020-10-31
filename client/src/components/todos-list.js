@@ -24,7 +24,7 @@ export default class TodoList extends Component {
 
     // method to request backend and retrieve list of todos
     componentDidMount() {
-        axios.get("http://localhost:5000/todos")
+        axios.get("http://localhost:5000/todo-list")
             .then(response => {
                 // setState passing in an object containing the todos state property; not set to an empty array.  it's set to the data getting de;ivered with the response object.  assigning todos in the state
                 this.setState({ todos: response.data })
@@ -36,7 +36,7 @@ export default class TodoList extends Component {
 
     // final installment, adding the update info to delete todo
     componentDidUpdate() {
-        axios.get("http://localhost:5000/todos")
+        axios.get("http://localhost:5000/todo-list")
             .then(response => {
                 this.setState({ todos: response.data });
             })
