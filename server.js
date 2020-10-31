@@ -25,14 +25,14 @@ app.use("/todos", todoRoutes);
 
 // connecting to mongoDB with a configuration parameter 
 mongoose.connect(
-    process.env.MONGODB_URI || "mongodb://localhost/todo-list", 
-        {
-            useNewUrlParser: true,
-            useUnifiedTopology: true,
-            useCreateIndex: true,
-            useFindAndModify: false
-          }
-    );
+    process.env.MONGODB_URI || 'mongodb://localhost/todo-list',
+    {
+      useNewUrlParser: true,
+      useUnifiedTopology: true,
+      useCreateIndex: true,
+      useFindAndModify: false
+    }
+  );
 // const connection = mongoose.connection;
 
 // connection.once("open", function() {
